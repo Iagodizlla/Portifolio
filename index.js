@@ -1,6 +1,6 @@
 const dadosCardControleMedicamentos = {
     titulo: 'Controle de Medicamentos',
-    imagem: 'assets/controle-de-medicamentos.png',
+    imagem: '',
     gif: '',
     urlRepositorio: 'https://github.com/iagodizlla/controle-medicamentos',
     stack: [
@@ -15,7 +15,7 @@ const dadosCardControleMedicamentos = {
 const dadosCardGestaoEquipamentos = {
     titulo: 'Gestão de Equipamentos',
     imagem: '',
-    gif: 'https://i.imgur.com/SDgwx8m.gif',
+    gif: '',
     urlRepositorio: 'https://github.com/iagodizlla/gestao-de-equipamentos',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
