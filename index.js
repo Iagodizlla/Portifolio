@@ -26,6 +26,19 @@ const dadosCardGestaoEquipamentos = {
     descricao: `O sistema de Gestão de Equipamentos controla o estoque de um almoxarifado, com a gestão de equipamentos e o registro de chamados de manutenção que eventualmente ocorrem durante o uso dos equipamentos. Também são inclusas informações sobre os fabricantes dos equipamentos para contato de suporte ou compras.`
 }
 
+const dadosCardSitePessoal = {
+    titulo: 'Servidor de Minecraft',
+    imagem: '',
+    gif: '',
+    urlRepositorio: 'https://github.com/Iagodizlla/Site_Prototipo',
+    stack: [
+        'https://skillicons.dev/icons?i=html&theme=light',
+        'https://skillicons.dev/icons?i=css&theme=light',
+        'https://skillicons.dev/icons?i=javascript&theme=light'
+    ],
+    descricao: `Este é o meu site pessoal, onde compartilho informações sobre mim, meus projetos em minecraft. O site é responsivo e foi desenvolvido com HTML, CSS e JavaScript.`
+}
+
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
@@ -70,6 +83,14 @@ function selecionarSegundoCard() {
     carregarDadosCardAtual();
 }
 
+function selecionarTerceiroCard() {
+    if (cardSelecionado == dadosCardSitePessoal)
+        return;
+
+    cardSelecionado = dadosCardSitePessoal;
+    carregarDadosCardAtual();
+}
+
 function abrirModalProjeto() {
     document.getElementById('portfolioModalLabel').textContent = cardSelecionado.titulo;
     document.getElementById('portfolioModalImage').src = cardSelecionado.gif;
@@ -78,10 +99,12 @@ function abrirModalProjeto() {
 function main() {
     const btnSelecionarPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
     const btnSelecionarSegundoCard = document.getElementById("btnSelecionarSegundoCard");
+    const btnSelecionarTerceiroCard = document.getElementById("btnSelecionarTerceiroCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
     btnSelecionarPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
     btnSelecionarSegundoCard.addEventListener('click', selecionarSegundoCard);
+    btnSelecionarTerceiroCard.addEventListener('click', selecionarTerceiroCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
 
     selecionarPrimeiroCard();
