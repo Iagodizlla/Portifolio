@@ -1,6 +1,6 @@
 const dadosCardControleMedicamentos = {
     titulo: 'Controle de Medicamentos',
-    imagem: '',
+    imagem: 'assets/controle-de-medicamentos.png',
     gif: '',
     urlRepositorio: 'https://github.com/iagodizlla/controle-medicamentos',
     stack: [
@@ -9,11 +9,11 @@ const dadosCardControleMedicamentos = {
         'https://skillicons.dev/icons?i=cs&theme=light',
         'https://skillicons.dev/icons?i=net&theme=light',
     ],
-    descricao: `O sistema de Controle de Medicamentos apresenta o conceito de gerenciamento de um posto de saúde, com o controle de fornecimento, estoque, funcionários, pacientes e retirada de prescrições — com foco na rastreabilidade das movimentações de estoque.`
+    descricao: `O sistema de Controle de Medicamentos apresenta o conceito de gerenciamento de um posto de saÃºde, com o controle de fornecimento, estoque, funcionÃ¡rios, pacientes e retirada de prescriÃ§Ãµes â€” com foco na rastreabilidade das movimentaÃ§Ãµes de estoque.`
 };
 
 const dadosCardGestaoEquipamentos = {
-    titulo: 'Gestão de Equipamentos',
+    titulo: 'GestÃ£o de Equipamentos',
     imagem: '',
     gif: '',
     urlRepositorio: 'https://github.com/iagodizlla/gestao-de-equipamentos',
@@ -23,7 +23,7 @@ const dadosCardGestaoEquipamentos = {
         'https://skillicons.dev/icons?i=cs&theme=light',
         'https://skillicons.dev/icons?i=net&theme=light',
     ],
-    descricao: `O sistema de Gestão de Equipamentos controla o estoque de um almoxarifado, com a gestão de equipamentos e o registro de chamados de manutenção que eventualmente ocorrem durante o uso dos equipamentos. Também são inclusas informações sobre os fabricantes dos equipamentos para contato de suporte ou compras.`
+    descricao: `O sistema de GestÃ£o de Equipamentos controla o estoque de um almoxarifado, com a gestÃ£o de equipamentos e o registro de chamados de manutenÃ§Ã£o que eventualmente ocorrem durante o uso dos equipamentos. TambÃ©m sÃ£o inclusas informaÃ§Ãµes sobre os fabricantes dos equipamentos para contato de suporte ou compras.`
 }
 
 const dadosCardSitePessoal = {
@@ -36,14 +36,14 @@ const dadosCardSitePessoal = {
         'https://skillicons.dev/icons?i=css&theme=light',
         'https://skillicons.dev/icons?i=javascript&theme=light'
     ],
-    descricao: `Este é o meu site pessoal, onde compartilho informações sobre mim, meus projetos em minecraft. O site é responsivo e foi desenvolvido com HTML, CSS e JavaScript.`
+    descricao: `Este Ã© o meu site pessoal, onde compartilho informaÃ§Ãµes sobre mim, meu server de Minecraft e minigames, como torneios e batalhas em equipes.`   
 }
 
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
     if (!cardSelecionado)
-        throw new Error('Card não selecionado.');
+        throw new Error('Card nÃ£o selecionado.');
 
     const imgCard = document.getElementById('imgCard');
     const stackCard = document.getElementById('stackCard');
