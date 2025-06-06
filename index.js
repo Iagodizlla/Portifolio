@@ -14,8 +14,8 @@ const dadosCardControleMedicamentos = {
 
 const dadosCardGestaoEquipamentos = {
     titulo: 'Gestão de Equipamentos',
-    imagem: '',
-    gif: '',
+    imagem: 'assets/gestao-de-equipamentos.png',
+    gif: 'https://i.imgur.com/kxM2Bre.gif',
     urlRepositorio: 'https://github.com/iagodizlla/gestao-de-equipamentos',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
@@ -28,7 +28,7 @@ const dadosCardGestaoEquipamentos = {
 
 const dadosCardSitePessoal = {
     titulo: 'Servidor de Minecraft',
-    imagem: '',
+    imagem: 'assets/iSrYNtB2ZK.png',
     gif: '',
     urlRepositorio: 'https://github.com/Iagodizlla/Site_Prototipo',
     stack: [
