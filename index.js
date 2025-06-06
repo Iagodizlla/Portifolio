@@ -29,7 +29,7 @@ const dadosCardGestaoEquipamentos = {
 const dadosCardSitePessoal = {
     titulo: 'Servidor de Minecraft',
     imagem: 'assets/iSrYNtB2ZK.png',
-    gif: '',
+    gif: 'https://i.imgur.com/AEdcdKF.gif',
     urlRepositorio: 'https://github.com/Iagodizlla/Site_Prototipo',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
