@@ -1,17 +1,3 @@
-const dadosCardControleMedicamentos = {
-    titulo: 'Controle de Medicamentos',
-    imagem: 'assets/controle-de-medicamentos.png',
-    gif: '',
-    urlRepositorio: 'https://github.com/iagodizlla/controle-medicamentos',
-    stack: [
-        'https://skillicons.dev/icons?i=html&theme=light',
-        'https://skillicons.dev/icons?i=css&theme=light',
-        'https://skillicons.dev/icons?i=cs&theme=light',
-        'https://skillicons.dev/icons?i=net&theme=light',
-    ],
-    descricao: `O sistema de Controle de Medicamentos apresenta o conceito de gerenciamento de um posto de saúde, com o controle de fornecimento, estoque, funcionários, pacientes e retirada de prescrições — com foco na rastreabilidade das movimentações de estoque.`
-};
-
 const dadosCardGestaoEquipamentos = {
     titulo: 'Gestão de Equipamentos',
     imagem: 'assets/gestao-de-equipamentos.png',
@@ -68,10 +54,10 @@ function carregarDadosCardAtual() {
 }
 
 function selecionarPrimeiroCard() {
-    if (cardSelecionado == dadosCardControleMedicamentos)
+    if (cardSelecionado == dadosCardSitePessoal)
         return;
 
-    cardSelecionado = dadosCardControleMedicamentos;
+    cardSelecionado = dadosCardSitePessoal;
     carregarDadosCardAtual();
 }
 
@@ -83,14 +69,6 @@ function selecionarSegundoCard() {
     carregarDadosCardAtual();
 }
 
-function selecionarTerceiroCard() {
-    if (cardSelecionado == dadosCardSitePessoal)
-        return;
-
-    cardSelecionado = dadosCardSitePessoal;
-    carregarDadosCardAtual();
-}
-
 function abrirModalProjeto() {
     document.getElementById('portfolioModalLabel').textContent = cardSelecionado.titulo;
     document.getElementById('portfolioModalImage').src = cardSelecionado.gif;
@@ -99,12 +77,10 @@ function abrirModalProjeto() {
 function main() {
     const btnSelecionarPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
     const btnSelecionarSegundoCard = document.getElementById("btnSelecionarSegundoCard");
-    const btnSelecionarTerceiroCard = document.getElementById("btnSelecionarTerceiroCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
     btnSelecionarPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
     btnSelecionarSegundoCard.addEventListener('click', selecionarSegundoCard);
-    btnSelecionarTerceiroCard.addEventListener('click', selecionarTerceiroCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
 
     selecionarPrimeiroCard();
