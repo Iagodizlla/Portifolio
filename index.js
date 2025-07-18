@@ -45,18 +45,38 @@ const dadosCardAgenda = {
     titulo: 'E-Agenda',
     imagem: 'assets/e-agenda.png',
     gif: 'https://i.imgur.com/cAuC5j0.gif',
-    urlRepositorio: 'https://github.com/Xique-Xique-Bahia/e-Agenda',
+    urlRepositorio: 'https://github.com/Iagodizlla/e-Agenda',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
         'https://skillicons.dev/icons?i=css&theme=light',
         'https://skillicons.dev/icons?i=cs&theme=light',
         'https://skillicons.dev/icons?i=net&theme=light',
         'https://skillicons.dev/icons?i=bootstrap&theme=light',
-        'https://skillicons.dev/icons?i=javascript&theme=light'
+        'https://skillicons.dev/icons?i=javascript&theme=light',
+        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg', // SQL Server
+        'https://skillicons.dev/icons?i=azure&theme=light'
     ],
     descricao: `A e-Agenda é um sistema web para gerenciar tarefas, contatos, compromissos, categorias e despesas. Permite cadastrar, editar, excluir e visualizar registros, com suporte a itens de tarefa, prioridades e controle de conclusão. Ideal para organização pessoal e profissional.`
 }
 
+const dadosCardAgendaOrm = {
+    titulo: 'E-Agenda-Orm',
+    imagem: 'assets/e-agenda.png',
+    gif: 'https://i.imgur.com/cAuC5j0.gif',
+    urlRepositorio: 'https://github.com/Iagodizlla/e-Agenda-ORM',
+    stack: [
+        'https://skillicons.dev/icons?i=html&theme=light',
+        'https://skillicons.dev/icons?i=css&theme=light',
+        'https://skillicons.dev/icons?i=cs&theme=light',
+        'https://skillicons.dev/icons?i=net&theme=light',
+        'https://skillicons.dev/icons?i=bootstrap&theme=light',
+        'https://skillicons.dev/icons?i=javascript&theme=light',
+        'https://skillicons.dev/icons?i=postgresql&theme=light',
+        'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg' // Render
+    ],
+
+    descricao: `A e-Agenda é um sistema web para gerenciar tarefas, contatos, compromissos, categorias e despesas. Permite cadastrar, editar, excluir e visualizar registros, com suporte a itens de tarefa, prioridades e controle de conclusão. Ideal para organização pessoal e profissional.`
+}
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
@@ -117,6 +137,13 @@ function selecionarQuartoCard() {
         carregarDadosCardAtual();
 }
 
+function selecionarQuintoCard() {
+    if (cardSelecionado == dadosCardAgendaOrm)
+        return;
+
+    cardSelecionado = dadosCardAgendaOrm;
+    carregarDadosCardAtual();
+}
 function abrirModalProjeto() {
     document.getElementById('portfolioModalLabel').textContent = cardSelecionado.titulo;
     document.getElementById('portfolioModalImage').src = cardSelecionado.gif;
@@ -127,12 +154,14 @@ function main() {
     const btnSelecionarSegundoCard = document.getElementById("btnSelecionarSegundoCard");
     const btnSelecionarTerceiroCard = document.getElementById("btnSelecionarTerceiroCard");
     const btnSelecionarQuartoCard = document.getElementById("btnSelecionarQuartoCard");
+    const btnSelecionarQuintoCard = document.getElementById("btnSelecionarQuintoCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
     btnSelecionarPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
     btnSelecionarSegundoCard.addEventListener('click', selecionarSegundoCard);
     btnSelecionarTerceiroCard.addEventListener('click', selecionarTerceiroCard);
     btnSelecionarQuartoCard.addEventListener('click', selecionarQuartoCard);
+    btnSelecionarQuintoCard.addEventListener('click', selecionarQuintoCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
 
     selecionarPrimeiroCard();
