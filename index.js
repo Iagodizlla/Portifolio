@@ -93,7 +93,8 @@ const dadosCardControleCinema = {
         'https://skillicons.dev/icons?i=postgresql&theme=light',
         'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg',
         'https://skillicons.dev/icons?i=azure&theme=light',
-        'https://skillicons.dev/icons?i=docker&theme=light'
+        'https://skillicons.dev/icons?i=docker&theme=light',
+        'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/newrelic.svg'
         ],
         descricao: `O Controle de Cinema tem como objetivo gerenciar filmes, sessões e ingressos de forma prática e organizada, permitindo que empresas administrem filmes, salas e sessões, enquanto clientes podem visualizar opções, escolher lugares e comprar ingressos.`
 };
