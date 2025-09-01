@@ -77,6 +77,27 @@ const dadosCardAgendaOrm = {
 
     descricao: `A e-Agenda é um sistema web para gerenciar tarefas, contatos, compromissos, categorias e despesas. Permite cadastrar, editar, excluir e visualizar registros, com suporte a itens de tarefa, prioridades e controle de conclusão. Ideal para organização pessoal e profissional.`
 }
+
+const dadosCardControleCinema = {
+    titulo: 'Controle de Cinema',
+    imagem: 'assets/controle-de-cinema.png',
+    gif: 'https://i.imgur.com/K48XU9w.gif',
+    urlRepositorio: 'https://github.com/runa-do-codigo/controle-de-cinema',
+    stack: [
+        'https://skillicons.dev/icons?i=html&theme=light',
+        'https://skillicons.dev/icons?i=css&theme=light',
+        'https://skillicons.dev/icons?i=cs&theme=light',
+        'https://skillicons.dev/icons?i=net&theme=light',
+        'https://skillicons.dev/icons?i=bootstrap&theme=light',
+        'https://skillicons.dev/icons?i=javascript&theme=light',
+        'https://skillicons.dev/icons?i=postgresql&theme=light',
+        'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg',
+        'https://skillicons.dev/icons?i=azure&theme=light',
+        'https://skillicons.dev/icons?i=docker&theme=light'
+        ],
+        descricao: `O Controle de Cinema tem como objetivo gerenciar filmes, sessões e ingressos de forma prática e organizada, permitindo que empresas administrem filmes, salas e sessões, enquanto clientes podem visualizar opções, escolher lugares e comprar ingressos.`
+};
+
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
@@ -133,8 +154,8 @@ function selecionarQuartoCard() {
     if (cardSelecionado == dadosCardAgenda)
         return;
 
-        cardSelecionado = dadosCardAgenda;
-        carregarDadosCardAtual();
+    cardSelecionado = dadosCardAgenda;
+    carregarDadosCardAtual();
 }
 
 function selecionarQuintoCard() {
@@ -144,6 +165,15 @@ function selecionarQuintoCard() {
     cardSelecionado = dadosCardAgendaOrm;
     carregarDadosCardAtual();
 }
+
+function selecionarSextoCard() {
+    if (cardSelecionado == dadosCardControleCinema)
+        return;
+
+    cardSelecionado = dadosCardControleCinema;
+    carregarDadosCardAtual();
+}
+
 function abrirModalProjeto() {
     document.getElementById('portfolioModalLabel').textContent = cardSelecionado.titulo;
     document.getElementById('portfolioModalImage').src = cardSelecionado.gif;
@@ -155,6 +185,7 @@ function main() {
     const btnSelecionarTerceiroCard = document.getElementById("btnSelecionarTerceiroCard");
     const btnSelecionarQuartoCard = document.getElementById("btnSelecionarQuartoCard");
     const btnSelecionarQuintoCard = document.getElementById("btnSelecionarQuintoCard");
+    const btnSelecionarSextoCard = document.getElementById("btnSelecionarSextoCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
     btnSelecionarPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
@@ -162,6 +193,7 @@ function main() {
     btnSelecionarTerceiroCard.addEventListener('click', selecionarTerceiroCard);
     btnSelecionarQuartoCard.addEventListener('click', selecionarQuartoCard);
     btnSelecionarQuintoCard.addEventListener('click', selecionarQuintoCard);
+    btnSelecionarSextoCard.addEventListener('click', selecionarSextoCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
 
     selecionarPrimeiroCard();
